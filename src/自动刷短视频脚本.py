@@ -4,7 +4,7 @@ import os
 
 a = 0
 b = 0
-
+"""
 while True:
     c = randint(3,15)# 每个视频在3-15秒之间随机播放
     a = a + 1
@@ -38,4 +38,3 @@ while True:
         print(f"当前总共用了{b}秒")
 sleep(3)
 os.system("adb shell am force-stop com.kuaishou.nebula")
-"""
