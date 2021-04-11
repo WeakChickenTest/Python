@@ -35,6 +35,13 @@ for i in range(1000):
     d = random.randint(20,27)
     b = b + (str(d))
 
+    # 用户的数据字，10~40个字符
+    c = random.randint(10, 40)
+    for i in range(c):
+        c1 = random.randint(0, len(a1) - 1)
+        b = b + a2[c1]
+    b = b + ","
+    print(c)
     print(f"第{b1}行数据：{b}")
     f.write(b + "\n")
 f.close()# 保存文件
