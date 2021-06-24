@@ -9,7 +9,7 @@ c = random.randint(9,12) # random.randint 从指定的范围内随机产生一�
 for i in range(c):
     d = random.randint(0,len(a)-1)
     b = b + a[d]
-print(c)
+print(f"密码长度为：{c}")
 print(b)
 
 # 912zPspO5DgS
