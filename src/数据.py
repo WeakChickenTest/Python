@@ -261,4 +261,4 @@ table = b.add_sheet("表一")
 for i in range(len(a)):
 	table.write(i, 0, a1[i])
 	table.write(i, 1, a2[i])
-b.save('数据.xlsx')
+b.save('数据.xls')
