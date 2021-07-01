@@ -37,4 +37,4 @@ while True:
         b = b + c
         print(f"当前总共用了{b}秒")
 sleep(3)
-os.system("adb shell am force-stop com.kuaishou.nebula")
+os.system("adb shell am force-stop com.smile.gifmaker")
