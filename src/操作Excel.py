@@ -8,13 +8,13 @@ a = [["参数1","预期结果"],#,"实际结果","是否通过"
     ["上海","OK"],
     ["Python","invilad-citykey"],
     ["深圳","OK"],
-    ["杭州","OK"]]
+    ["杭州","NO"]]
 for i in range(len(a)):
     for j in range(len(a[i])):
         table.write(i,j,a[i][j])# i，j分别是单元格的坐标，i表示行数，j表示列数
-excel.save("测试表格.xlsx")
+excel.save("测试表格.xls")
 
-Excel = xlrd.open_workbook(filename=r'测试表格.xlsx')# Excel表格的路径，Windows环境下，如果文件不在当前目录下，需要在路径前加上小写的r
+Excel = xlrd.open_workbook(filename=r'测试表格.xls')# Excel表格的路径，Windows环境下，如果文件不在当前目录下，需要在路径前加上小写的r
 table = Excel.sheets()[0]# 第一种选择子表的方法，数字0表示选择第一张子表
 # table = Excel.sheet_by_index(0)# 第二种选择子表的方法，数字0表示选择第一张子表
 # table = Excel.sheet_by_name('子表')# 第三种选择子表的方法，直接写子表名，写不存在的子表名会报错
