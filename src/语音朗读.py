@@ -11,5 +11,8 @@ class yuyin:
         engine.runAndWait()
 
 
-a = yuyin("天……天上有个太阳~，水中有个月亮")
-a.bofang()
+txt = open(r"语音朗读.txt", encoding="UTF-8")
+for i in txt:
+    print(i)
+    a = yuyin(i)
+    a.bofang()
