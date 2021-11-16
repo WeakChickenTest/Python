@@ -1,7 +1,7 @@
 import requests
 
 
-def re(canshu):
+def chengshi(canshu):
     url = "http://wthrcdn.etouch.cn/weather_mini"
     canshu = {"city": canshu}
     re = requests.get(url=url, params=canshu)
