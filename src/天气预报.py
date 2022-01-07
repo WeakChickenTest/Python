@@ -14,7 +14,7 @@ for i in range(hang):
 
 for i in range(1, len(a)):  # 去掉表头内容
     chengshi = a[i][0]
-    b = tianqi_API.re(chengshi)
+    b = tianqi_API.chengshi(chengshi)
     a[i][2] = b['desc']
     if b['desc'] == a[i][1]:
         a[i][3] = '成功'
