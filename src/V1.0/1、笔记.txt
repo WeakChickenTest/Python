@@ -45,6 +45,14 @@ pip install  allure-pytest
 2、allure generate ./result/ -o ./report/ --clean
 第三步作用：使用allure工具开启127.0.0.1:8083网页    展示报告
 3、allure open -h 127.0.0.1  -p 8083 ./report/
+############################################
+1、使用pytest执行脚本，将执行的结果数据保存到同级目录下的report中，如果没有report，则会自动创建
+pytest test.py --alluredir=./report
+2、使用allure将结果数据编译成HTML，存储到同级目录下的123中，如果没有123，则会自动创建，已经有123了但还想保存到同一个文件夹下，就在后边加上 --clean 参数
+allure generate ./report -o ./123 --clean
+3、打开测试报告。打开的端口可能不固定，可以在 open 后加上【-p 端口】，这样就会用指定的端口打开测试报告了
+allure open ./123
+
 
 airtest是什么？
 网易开发的UI自动化测试工具
