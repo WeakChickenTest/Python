@@ -1,37 +1,41 @@
 """
 若干个大于等于1，小于等于100的整数，分成n份，每一份里的所有数字都可以被这里边最小数字整除。
-要求给出一组数字，计算出可以分成几份
+要求：给出一组数字，计算出可以分成几份
 """
+import random
 
-# 先将输入的内容变成列表
-a = eval(input("请输入数组："))
-b = list(a)
+int0 = int(input("请输入大于等于1，小于等于100的整数："))
 
-# 将列表的元素按照从小到大的顺序排列
-# [10, 45, 17, 55, 49, 72, 56, 33, 7, 12, 35, 53, 81, 27, 49]
-for i in range(len(b)):
-    for j in range(len(b)):
-        if b[i] < b[j]:
-            b[i], b[j] = b[j], b[i]
-print(b)
+list1 = []
+while True:
+    int1 = random.randint(1, 100)
+    # 随机数不在列表中，就添加到里边
+    if int1 not in list1:
+        list1.append(int1)
 
-c = []
-c1 = []
-for i in b:
-    d = []
-    for j in b:
-        # 分别取出列表中的数字，令列表中的元素进行取余运算，已经有过取余为0的数字不再参与取余运算
-        if j % i == 0 & j not in c1:
-            d.append(j)
-            c1.append(j)
-    c.append(d)
-# 删除空的列表
-n = 0
-for i in c:
-    if len(i) == 0:
-        n = n + 1
-for m in range(n):
-    c.remove([])
-# 输出分组结果和所需要的颜色数量
-print(c)
-print(len(c))
+    # 如果列表长度达到了要求，就跳出循环
+    if len(list1) == int0:
+        break
+
+# 按照从小到大的顺序排列
+for l1 in range(len(list1)):
+    for l2 in range(len(list1)-1):
+        if list1[l1] < list1[l2]:
+            list1[l1], list1[l2] = list1[l2], list1[l1]
+
+a1 = []
+a2 = []
+for j1 in list1:
+    a3 = []
+    for j2 in list1:
+        if j2 not in a2 and j2 % j1 == 0:
+            a2.append(j2)
+            a3.append(j2)
+    a1.append(a3)
+
+A = []
+for L in a1:
+    if len(L) != 0:
+        A.append(L)
+print(len(A))
+print(A)
