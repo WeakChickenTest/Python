@@ -15,5 +15,6 @@ print(f"密码长度为：{c}")
 print(b)
 
 # 912zPspO5DgS
-# gitlab密码：4GtKBuzIEpve
-# staem密码:UPI8q0xDFg
+# steam密码：UPI8q0xDFg
+# Apple密码：iVaoPDSm04uv
+# M3密码：CJ78mbQD9PD
